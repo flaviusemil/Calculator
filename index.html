@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="dist/main.css"/>
+    <title>Title</title>
+</head>
+<body>
+
+<div id="vue-calculator" class="container">
+    <div class="row mt-2">
+        <div class="col">
+            <h1>Calculator VueJS</h1>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="container calculator">
+            <div class="row">
+                <input readonly disabled class="p-2 m-2 w-100" type="text" v-bind:value="expression"/>
+            </div>
+            <div class="row">
+                <div class="">
+                    <button class="btn btn-secondary m-2" v-on:click="clickOperation">(</button>
+                </div>
+                <div class="">
+                    <button class="btn btn-secondary m-2" v-on:click="clickOperation">)</button>
+                </div>
+                <div class="">
+                    <button class="btn btn-secondary m-2" v-on:click="clickOperation">%</button>
+                </div>
+                <div class="">
+                    <button class="btn btn-secondary m-2" v-on:click="clickOperation">CE</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="">
+                    <button class="btn m-2" v-on:click="clickNumber">7</button>
+                </div>
+                <div class="">
+                    <button class="btn m-2" v-on:click="clickNumber">8</button>
+                </div>
+                <div class="">
+                    <button class="btn m-2" v-on:click="clickNumber">9</button>
+                </div>
+                <div class="">
+                    <button class="btn btn-secondary m-2" v-on:click="clickOperation">/</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="">
+                    <button class="btn m-2" v-on:click="clickNumber">4</button>
+                </div>
+                <div class="">
+                    <button class="btn m-2" v-on:click="clickNumber">5</button>
+                </div>
+                <div class="">
+                    <button class="btn m-2" v-on:click="clickNumber">6</button>
+                </div>
+                <div class="">
+                    <button class="btn btn-secondary m-2" v-on:click="clickOperation('*', false)">&times;</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="">
+                    <button class="btn m-2" v-on:click="clickNumber">1</button>
+                </div>
+                <div class="">
+                    <button class="btn m-2" v-on:click="clickNumber">2</button>
+                </div>
+                <div class="">
+                    <button class="btn m-2" v-on:click="clickNumber">3</button>
+                </div>
+                <div class="">
+                    <button class="btn btn-secondary m-2" v-on:click="clickOperation">-</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="">
+                    <button class="btn m-2" v-on:click="clickNumber">0</button>
+                </div>
+                <div class="">
+                    <button class="btn m-2" v-on:click="clickNumber">.</button>
+                </div>
+                <div class="">
+                    <button class="btn btn-primary m-2" v-on:click="clickOperation">=</button>
+                </div>
+                <div class="">
+                    <button class="btn btn-secondary m-2" v-on:click="clickOperation">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="dist/main.js"></script>
+
+</body>
+</html>

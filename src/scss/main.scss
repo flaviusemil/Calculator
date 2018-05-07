@@ -1,0 +1,27 @@
+body {
+  background-color: #222;
+}
+
+$textColor: #FAFAFA;
+
+h1 {
+  color: $textColor;
+  text-align: center;
+}
+
+.calculator {
+  width: calc(6% + 400px);
+
+  button {
+    width: 100px;
+  }
+
+  input[readonly],
+  input[disabled] {
+    text-align: right;
+    color: $textColor;
+    font-size: 1.2em;
+    line-height: unset;
+  }
+}
+
