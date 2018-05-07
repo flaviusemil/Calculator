@@ -1,4 +1,5 @@
-# vue-js-homework15
+# Calculator App
+A simple calculator app written in Vue JS
 
 ## Build Project
 
