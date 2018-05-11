@@ -14,12 +14,9 @@ let jsApp = new Vue({
         expression: "",
     },
     methods: {
-        clickOperation: function (operation, object = true) {
+        clickOperation: function (operation) {
 
-            let op = operation;
-
-            if (object === true)
-                op = this.getTextFromMouseEvent(operation);
+            let op = this.getTextFromMouseEvent(operation);
 
             switch (op) {
                 case '=':
@@ -39,6 +36,7 @@ let jsApp = new Vue({
         },
 
         replaceSpecialCharacters: function() {
+            this.expression = this.expression.replace(String.fromCharCode(215), "*");
             this.expression = this.expression.replace(/(\d+)%/g, function(match, p1) {
                 return parseInt(p1) / 100;
             });
