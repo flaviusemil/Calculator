@@ -28,6 +28,12 @@ let jsApp = new Vue({
                       this.expression = eval(this.expression);
                     // this.expression = this.parser(this.expression);
                     break;
+                case '%':
+                    this.expression += op;
+                    this.expression = this.expression.replace(/(\d+)%/i, function(match, p1) {
+                        return parseInt(p1) / 100;
+                    });
+                    break;
                 case "CE":
                     this.expression = "";
                     break;
